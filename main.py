@@ -1,41 +1,40 @@
 #!/usr/bin/env python3
-"""Place the finished front page where the grader expects it.
+"""Run the news-image-20261125 entry: hand the finished picture to the grader.
 
-render.py draws the picture and saves it next to this file as entry.png.
-This runner only copies those exact bytes into the output directory, so
-every grading run writes identical bytes. No clock, no network, no
-randomness, nothing read from outside the repository.
+render.py paints the front page and stores it as entry.png beside this file.
+All this program does is move that exact file into the directory the grader
+names through MAKEFUN_OUTPUT_DIR (or ./out when the variable is absent).
+Moving bytes cannot change them, so each run writes the same picture.
 """
 
-import os
-import shutil
+import pathlib
 import sys
-from pathlib import Path
+from os import environ
+from shutil import copyfile
 
-OUTPUT_ENV = "MAKEFUN_OUTPUT_DIR"
-SOURCE_NAME = "entry.png"
-
-
-def picture_path() -> Path:
-    return Path(__file__).resolve().parent / SOURCE_NAME
+PICTURE = "entry.png"
 
 
-def destination_dir() -> Path:
-    return Path(os.environ.get(OUTPUT_ENV, "out"))
+def _picture_file():
+    return pathlib.Path(__file__).resolve().parent / PICTURE
 
 
-def place() -> int:
-    src = picture_path()
-    if not src.is_file():
-        print(f"missing picture: {src}", file=sys.stderr)
+def _target_dir():
+    return pathlib.Path(environ.get("MAKEFUN_OUTPUT_DIR", "out"))
+
+
+def run():
+    picture = _picture_file()
+    if not picture.exists():
+        print("no picture to place:", picture, file=sys.stderr)
         return 1
-    out = destination_dir()
-    out.mkdir(parents=True, exist_ok=True)
-    target = out / SOURCE_NAME
-    shutil.copyfile(src, target)
-    print(f"placed {target} ({target.stat().st_size} bytes)")
+    folder = _target_dir()
+    folder.mkdir(parents=True, exist_ok=True)
+    target = folder / PICTURE
+    copyfile(picture, target)
+    print("wrote", target, target.stat().st_size, "bytes")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(place())
+    raise SystemExit(run())
