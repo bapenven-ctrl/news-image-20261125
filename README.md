@@ -27,7 +27,7 @@ every one dated Wednesday 25 November 2026 (UTC).
 - **THE DAY IN NUMBERS:** Kospi −6.2% · 14 tariff economies · 550,000 bpd ·
   $93.60 Brent · 4.3% US GDP · +26% UK energy cap · 11,000 jobs · 20 hostages.
 - **DATE CHECK:** 16 items left out because they happened or were first
-  reported before Wednesday — the Huawei verdict, the leaked 700,000 Russian
+  reported before Wednesday — the Huawei verdict, the leaked 490,000 Russian
   dead, Senegal restored, the Riyadh tower strike, the Hormuz tankers, Chen
   Jining, Cuba's life expectancy, Zambia's treason charge, Iraq's oilfields,
   the flogged singer, the Gaza strike, Poland's no-fly zone, the Benghazi
