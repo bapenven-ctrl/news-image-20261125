@@ -149,7 +149,7 @@ GRID = [
     ("MIDEAST", "NEW", "R", "US WEIGHS STRIKING IRAN LEADERS",
      "Reports say Khamenei among targets; Israel cites chemicals", "target", None),
     ("MIDEAST", "NEW", "C", "HODEIDAH PORT STRUCK",
-     "Coalition hits port; Houthis threaten Jeddah", "port", "80%"),
+     "Coalition hits port; Houthis threaten Jeddah", "port", None),
     ("EUROPE", "NEW", "R", "MERZ: RUSSIA WANTS MORE",
      "Berlin: Moscow escalating massively beyond Ukraine", "flag", None),
     ("MIDEAST", "NEW", "C", "KNESSET: OCT 7 INQUIRY ADVANCES",
@@ -194,7 +194,7 @@ ALSO = [
     "Japan unveils moon-water rover prototype",
 ]
 
-DATE_CHECK = ("DATE CHECK — LEFT OUT, NOT 25 NOVEMBER: Huawei verdict · 700,000 Russian "
+DATE_CHECK = ("DATE CHECK — LEFT OUT, NOT 25 NOVEMBER: Huawei verdict · 490,000 Russian "
               "dead leak · Senegal restored · Riyadh tower · Hormuz tankers · Chen Jining · "
               "Cuba life expectancy · Zambia treason · Iraq oilfields · singer flogged · "
               "Gaza strike · Poland no-fly zone · Benghazi ships · Iowa blast · Wolbachia · "
